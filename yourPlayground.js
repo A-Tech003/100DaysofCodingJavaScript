@@ -54,7 +54,7 @@
 // }
 
 // example of an implicity arrow function return
-const mySum = (a, b) => a + b;
+// const mySum = (a, b) => a + b;
 
 // console.log(mySum(2, 2))
 
@@ -62,11 +62,39 @@ const mySum = (a, b) => a + b;
 // food tip calculator
 // this function helps in calculating the total amount for the food including the tip given
 // this function also has two arguments
-const tipCalculator = (food, tip) => {
-    const tipPercentage = tip / 100;
-    const tipAmount = food * tipPercentage;
-    const total = mySum(food, tipAmount);
-    return total;
-}
+// const tipCalculator = (food, tip) => {
+//     const tipPercentage = tip / 100;
+//     const tipAmount = food * tipPercentage;
+//     const total = mySum(food, tipAmount);
+//     return total;
+// }
 
-console.log(tipCalculator(100, 20));
+// console.log(tipCalculator(100, 20));
+
+// Arrays
+const groceries = ['🍌', '🍓', '🥥', '🍎'];
+// console.log(groceries);
+
+// grabbing first index
+// console.log(groceries[0]);
+
+// grabbing the last index
+// console.log(groceries[3]);
+
+// adding another item into the array
+groceries.push('🔫');
+// console.log(groceries);
+
+groceries.push('🥭');
+// console.log(groceries);
+
+// console.log(groceries.slice(1, 3));
+// console.log(groceries.slice(3, 6));
+// console.log(groceries.slice(0, 6));
+// console.log(groceries.slice(1, 4));
+
+// checking the index of an item in my groceries cart(array i mean lol)
+// console.log(groceries.indexOf('🥥'));
+
+// checking length of my groceries
+// console.log(groceries.length);

@@ -27,5 +27,5 @@ console.log('hello from the SUM exercise')
   TODO: create a function that console logs the result of any of the above operations.
 */
 
-console.log(add(4, 4));
-console.log(div(2, 2));
+// console.log(add(4, 4));
+// console.log(div(2, 2));
