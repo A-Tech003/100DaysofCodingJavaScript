@@ -152,11 +152,14 @@ const introducer2 = (name, shirt) => {
         name: name,
         shirt: shirt,
         assest: 100000,
-        liabilities: 50000
+        liabilities: 50000,
+        networth: function(){
+            return this.assest - this.liabilities;
+        }
     }
 
     const intro = `Hi, My name is ${person.name} and i am putting on a ${person["shirt"]} shirt 
-    and my networth is ${person.assest - person.liabilities}`;
+    and my networth is $${person.networth()}`;
     return intro;
 }
 
