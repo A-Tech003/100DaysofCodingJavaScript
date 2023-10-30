@@ -164,6 +164,24 @@ const introducer2 = (name, shirt) => {
 }
 
 
-console.log(introducer2("Amos", "Blue"));
-console.log(introducer2("Leonardo", "White"));
+// console.log(introducer2("Amos", "Blue"));
+// console.log(introducer2("Leonardo", "White"));
 
+//  for loop
+let fruits = ['🍌','🍎', '🍊', '🍐', '🍌','🍎', '🍊', '🍐', '🍌','🍎', '🍊', '🍐', '🍌','🍎', '🍊', '🍐']
+// for(let i = 0; i<fruits.length; i++){
+//     console.log(i, fruits[i]);
+// }
+
+for(const fruit of fruits){
+    console.log(fruit);
+}
+
+let number = [1, 2, 3, 4, 5, 6];
+for(let i = 0; i<number.length; i++){
+    console.log(number[i]);
+}
+
+for(const num of number){
+    console.log(num)
+}
