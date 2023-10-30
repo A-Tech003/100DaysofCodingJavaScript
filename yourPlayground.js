@@ -173,15 +173,47 @@ let fruits = ['🍌','🍎', '🍊', '🍐', '🍌','🍎', '🍊', '🍐', '�
 //     console.log(i, fruits[i]);
 // }
 
-for(const fruit of fruits){
-    console.log(fruit);
-}
+// for(const fruit of fruits){
+//     console.log(fruit);
+// }
 
 let number = [1, 2, 3, 4, 5, 6];
-for(let i = 0; i<number.length; i++){
-    console.log(number[i]);
+// for (let i = 0; i<number.length; i++) {
+//     console.log(number[i]);
+// }
+
+
+// this method double every element in your array
+const double = (numbers) => {
+    let result = [];
+
+    for(const number of numbers){
+        result.push(number * 2);
+    }
+
+    return result;
 }
 
-for(const num of number){
-    console.log(num)
+// console.log(double([3,5]));
+
+
+// this method squalre every elment in your array
+const square = (numbers) => {
+    let result = [];
+
+    for (const number of numbers){
+        result.push(number**2)
+    }
+
+    return result;
 }
+
+// console.log(square([2,4]))
+
+// let result = [];
+
+// for(const num of number){
+//     result.push(num * 2);
+// }
+
+// console.log(result);
