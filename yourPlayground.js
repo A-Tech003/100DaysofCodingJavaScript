@@ -216,4 +216,97 @@ const square = (numbers) => {
 //     result.push(num * 2);
 // }
 
-// console.log(result);
+// console.log(result); 
+
+// looping through the numbers
+
+const myFunction = () => {
+    const numbers = [2, 3, 4, 5, 6, 7, 8, 9];
+
+    for (number in numbers){
+        console.log(number)
+    }
+
+    console.log(numbers.indexOf(2));
+}
+
+// myFunction()
+
+
+// const howManyCharacters = () => {
+//     const sentence = 'hey, can you go to grocery store with me?';
+//     let count = 0;
+
+//     for(letter of sentence){
+//         // console.log(letter);
+//         count++;
+//     }
+
+//     return count;
+// }
+
+// console.log(howManyCharacters());
+
+// functions that count characters
+const howManyCharacters = (phrase) => {
+    // let result = 0;
+
+    // for(letter in phrase){
+    //     console.log(Number(letter) + 1)
+
+    //     result = Number(letter) + 1;
+    // }
+
+    return {length: phrase.length}
+
+}
+
+const phrase = "hey, can you go to grocery store with me?";
+// console.log(howManyCharacters(phrase));
+
+// this is a function that accept variables, amd it sum up all numbers in an array
+const sumUp = (numbers) => {
+    let result = 0;
+
+    for (number of numbers){
+        result += number;
+    }
+
+    return {number: result};
+}
+
+numbers = [1, 2, 3, 4, 5, 6];
+// console.log(sumUp(numbers));
+
+
+// this is a function that accept variables, amd it sum up all numbers in an array
+const sumArray = (argum) => {
+    
+    let ans = 0;
+    for (num of array){
+        ans += num
+    }
+
+    return{ans}
+}
+
+const array = [1, 2, 3, 4, 5, 6, 20];
+// console.log(sumArray(array))
+
+
+//  this function below find the max in an array
+const findMax = (argument) => {
+    let max = 0;
+
+    for(num of argument){
+        if(num > max){
+            max = num;
+        }else{
+            return max;
+        }
+    }
+
+    return {max};
+}
+
+console.log(findMax(array))
