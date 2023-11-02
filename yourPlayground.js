@@ -290,7 +290,7 @@ const sumArray = (argum) => {
     return{ans}
 }
 
-const array = [1, 2, 3, 4, 5, 6, 20];
+const array = [1, 2, 3, 4, 5, 6, 6, 20];
 // console.log(sumArray(array))
 
 
@@ -309,4 +309,33 @@ const findMax = (argument) => {
     return {max};
 }
 
-console.log(findMax(array))
+// console.log(findMax(array))
+
+// this function below shows how many times a number appears
+const findFrequency = (argument) => {
+    let frequnecy = {};
+
+    for (letter of argument){
+        if(letter in frequnecy){
+            frequnecy[letter] += 1;
+        }else{
+            frequnecy[letter] = 1;
+        }
+    }
+
+    return frequnecy
+}
+
+// console.log(findFrequency(array))
+
+const checkCharacter = (letters) => {
+
+    let a = 0
+    if(a in letters){
+        return "yes it is there.";
+    }else{
+        return "no it's not there.";
+    }
+}
+
+console.log(checkCharacter());
