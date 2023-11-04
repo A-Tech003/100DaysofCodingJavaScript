@@ -329,13 +329,16 @@ const findFrequency = (argument) => {
 // console.log(findFrequency(array))
 
 const checkCharacter = (letters) => {
-
-    let a = 0
-    if(a in letters){
-        return "yes it is there.";
-    }else{
-        return "no it's not there.";
+    let frequnecy = {}
+    for (letter of letters){
+        if(letter in frequnecy){
+            frequnecy.letter += 1;
+        }else{
+            frequnecy.letter = 1;
+        }
     }
+
+    return frequnecy
 }
 
-console.log(checkCharacter());
+// console.log(checkCharacter("comee"));
