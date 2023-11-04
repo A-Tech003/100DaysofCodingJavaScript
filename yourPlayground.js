@@ -342,3 +342,41 @@ const checkCharacter = (letters) => {
 }
 
 // console.log(checkCharacter("comee"));
+
+// trying to split a sentence with spaace
+
+let sentence = "Hey, what, sup";
+let seprating = sentence.split(' ');
+for(word of seprating){
+    // console.log(word);
+}
+
+// trying to split a sentence or word with a coma,
+let sentence1 = "Hey, what, sup";
+let seprating1 = sentence.split(',');
+for(word of seprating1){
+    // console.log(word);
+}
+
+
+// now the function below checks frequency of words
+const checkWordFrequency = (words) => {
+    // decalre an empty object so as to store our result in here
+    let frequency = {};
+
+    // breaking or split the words so we can be able to loop through it as words and not just a character
+    let brokenWords = words.split(' ');
+
+    for (word of brokenWords){
+        if (word in frequency){
+            frequency[word] += 1
+        }else{
+            frequency[word] = 1;
+        }
+    }
+
+    return frequency;
+}
+
+const typeInHere = prompt("Type in something: ");
+console.log(checkWordFrequency(typeInHere));
