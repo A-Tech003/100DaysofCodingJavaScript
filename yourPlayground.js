@@ -388,7 +388,7 @@ const greaterThan3 = (arrays, greaterThan) => {
     return filteredNumbers;
 }
 
-console.log(greaterThan3([1, 2, 3, 4, 5, 6], 3));
+// console.log(greaterThan3([1, 2, 3, 4, 5, 6], 3));
 
 //  creating the above filter function manually.
 
@@ -404,4 +404,15 @@ const Greater = (numbers, mainNumber) => {
     return newArray;
 }
 
-console.log(Greater([1, 2, 3, 4, 5, 6], 4));
+// console.log(Greater([1, 2, 3, 4, 5, 6], 4));
+
+//  using the filter function to filter by networth.
+
+const actor = [
+    {name: 'Johnny', networth: 200000},
+    {name: 'amber', networth: 10},
+    {name: 'Jake', networth: 900000}
+]
+
+const filterNetworth = actor.filter(act => act.networth > 10);
+console.log(filterNetworth);
