@@ -368,7 +368,7 @@ const checkWordFrequency = (words) => {
     return checkCharacter(brokenWords);
 }
 
-console.log(checkWordFrequency("Type in something: "));
+// console.log(checkWordFrequency("Type in something: "));
 
 // let numbArray = [4, 3, 5, 6, 7, ,8 , 4];
 // number.map(numb => console.log(numb * 2));
@@ -378,4 +378,30 @@ const Duble = (numbArray) => {
     return result;
 }
 
-console.log(Duble([4, 3, 5, 6, 7, ,8 , 4]));
+// console.log(Duble([4, 3, 5, 6, 7, ,8 , 4]));
+
+// filtering numbers greater than 3
+
+const greaterThan3 = (arrays, greaterThan) => {
+
+    const filteredNumbers = arrays.filter((number) => number > greaterThan)
+    return filteredNumbers;
+}
+
+console.log(greaterThan3([1, 2, 3, 4, 5, 6], 3));
+
+//  creating the above filter function manually.
+
+
+const Greater = (numbers, mainNumber) => {
+    let newArray = [];
+    for(number of numbers){
+        if (number > mainNumber){
+            newArray.push(number);
+        }
+    }
+
+    return newArray;
+}
+
+console.log(Greater([1, 2, 3, 4, 5, 6], 4));
