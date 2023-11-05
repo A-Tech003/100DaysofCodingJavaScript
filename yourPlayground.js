@@ -328,21 +328,6 @@ const findFrequency = (argument) => {
 
 // console.log(findFrequency(array))
 
-const checkCharacter = (letters) => {
-    let frequnecy = {}
-    for (letter of letters){
-        if(letter in frequnecy){
-            frequnecy.letter += 1;
-        }else{
-            frequnecy.letter = 1;
-        }
-    }
-
-    return frequnecy
-}
-
-// console.log(checkCharacter("comee"));
-
 // trying to split a sentence with spaace
 
 let sentence = "Hey, what, sup";
@@ -358,25 +343,39 @@ for(word of seprating1){
     // console.log(word);
 }
 
-
-// now the function below checks frequency of words
-const checkWordFrequency = (words) => {
-    // decalre an empty object so as to store our result in here
-    let frequency = {};
-
-    // breaking or split the words so we can be able to loop through it as words and not just a character
-    let brokenWords = words.split(' ');
-
-    for (word of brokenWords){
-        if (word in frequency){
-            frequency[word] += 1
+const checkCharacter = (letters) => {
+    let frequnecy = {}
+    for (letter of letters){
+        if(letter in frequnecy){
+            frequnecy[letter] += 1;
         }else{
-            frequency[word] = 1;
+            frequnecy[letter] = 1;
         }
     }
 
-    return frequency;
+    return frequnecy
 }
 
-const typeInHere = prompt("Type in something: ");
-console.log(checkWordFrequency(typeInHere));
+// console.log(checkCharacter("comee"));
+
+
+
+// now the function below checks frequency of words
+const checkWordFrequency = (words) => {
+    // breaking or split the words so we can be able to loop through it as words and not just a character
+    let brokenWords = words.split(' ');
+
+    return checkCharacter(brokenWords);
+}
+
+console.log(checkWordFrequency("Type in something: "));
+
+// let numbArray = [4, 3, 5, 6, 7, ,8 , 4];
+// number.map(numb => console.log(numb * 2));
+
+const Duble = (numbArray) => {
+    let result = numbArray.map(nums => console.log(nums * 2));
+    return result;
+}
+
+console.log(Duble([4, 3, 5, 6, 7, ,8 , 4]));
