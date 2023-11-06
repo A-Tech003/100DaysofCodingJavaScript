@@ -426,6 +426,17 @@ const actors = [
 
 
 let names = actors.filter(actor => actor.networth > 10000);
+let namesss = names.map(name =>  name.name) 
+playground.innerHTML = `<h1>${JSON.stringify(namesss.join(", "))}</h1>`;
 
-playground.innerHTML = `<h1>${JSON.stringify(names[0].name)}</h1>`;
-playground.innerHTML = `<h1>${JSON.stringify(names[1].name)}</h1>`;
+// using the reduce
+let numberrs = [2, 1, 3, 4, 5, 6, 7];
+const result = numberrs.reduce(function(prev, next){
+    return prev + next;
+})
+console.log(result);
+
+// we can make the above solution on just one line
+const SumUp = numberrs.reduce((prev, next) => prev + next);
+console.log(SumUp);
+// console.log(numberrs.reduce()); 
