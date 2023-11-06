@@ -408,11 +408,24 @@ const Greater = (numbers, mainNumber) => {
 
 //  using the filter function to filter by networth.
 
-const actor = [
+const actors = [
     {name: 'Johnny', networth: 200000},
     {name: 'amber', networth: 10},
     {name: 'Jake', networth: 900000}
 ]
 
-const filterNetworth = actor.filter(act => act.networth > 10);
-console.log(filterNetworth);
+// for (act of actor){
+//     console.log(act);
+// }
+
+// const filterNetworth = actor.filter(act => act.networth > 10);
+// console.log(filterNetworth);
+
+// playground.innerHTML = `<h1>${JSON.stringify(filterNetworth[0])}</h1>`;
+// playground.innerHTML = `<h1>${actor[0].name}</h1>`
+
+
+let names = actors.filter(actor => actor.networth > 10000);
+
+playground.innerHTML = `<h1>${JSON.stringify(names[0].name)}</h1>`;
+playground.innerHTML = `<h1>${JSON.stringify(names[1].name)}</h1>`;
