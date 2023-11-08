@@ -434,9 +434,17 @@ let numberrs = [2, 1, 3, 4, 5, 6, 7];
 const result = numberrs.reduce(function(prev, next){
     return prev + next;
 })
-console.log(result);
+// console.log(result);
 
 // we can make the above solution on just one line
 const SumUp = numberrs.reduce((prev, next) => prev + next);
 console.log(SumUp);
 // console.log(numberrs.reduce()); 
+
+// using reduce to get the multipliction
+const multipliction = (prev, next) => prev * next;
+
+const multUp = numberrs.reduce(multipliction);
+console.log(multUp);
+
+// console.log(numberrs.join());
