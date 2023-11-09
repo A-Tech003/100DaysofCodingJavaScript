@@ -487,6 +487,8 @@ let yellowDiv = document.getElementById('yellow');
 let greenDiv = document.getElementById('green');
 
 redDiv.onclick = () => console.log("you clicked red");
+yellowDiv.onclick = () => console.log("you clicked yellow");
+greenDiv.onclick = () => console.log("you clicked green");
 
 
 
