@@ -409,9 +409,12 @@ const Greater = (numbers, mainNumber) => {
 //  using the filter function to filter by networth.
 
 const actors = [
-    {name: 'Johnny', networth: 200000},
+    {name: 'Johnny', networth: 2000000},
     {name: 'amber', networth: 10},
-    {name: 'Jake', networth: 900000}
+    {name: 'amber', networth: 10},
+    {name: 'matt', networth: 170000000},
+    {name: 'brad', networth: 300000000},
+    {name: 'Jake', networth: 10000000}
 ]
 
 // for (act of actor){
@@ -427,10 +430,10 @@ const actors = [
 
 let names = actors.filter(actor => actor.networth > 10000);
 let namesss = names.map(name =>  name.name) 
-playground.innerHTML = `<h1>${JSON.stringify(namesss.join(", "))}</h1>`;
+// playground.innerHTML = `<h1>${JSON.stringify(namesss.join(", "))}</h1>`;
 
 // using the reduce
-let numberrs = [2, 1, 3, 4, 5, 6, 7];
+let numberrs = [1, 2, 3, 4];
 const result = numberrs.reduce(function(prev, next){
     return prev + next;
 })
@@ -438,13 +441,54 @@ const result = numberrs.reduce(function(prev, next){
 
 // we can make the above solution on just one line
 const SumUp = numberrs.reduce((prev, next) => prev + next);
-console.log(SumUp);
+// console.log(SumUp);
 // console.log(numberrs.reduce()); 
 
 // using reduce to get the multipliction
 const multipliction = (prev, next) => prev * next;
 
 const multUp = numberrs.reduce(multipliction);
-console.log(multUp);
+// console.log(multUp);
 
 // console.log(numberrs.join());
+
+const actorWorth = [
+    {name: 'Johnny', networth: 2000000},
+    {name: 'amber', networth: 10},
+    {name: 'matt', networth: 170000000},
+    {name: 'brad', networth: 300000000},
+    {name: 'Jake', networth: 10000000}
+]
+
+// selecting out the networths only here so i can callculate.
+let networths = actorWorth.map(actw => actw.networth);
+// console.log(networths)
+let networthCalcu = networths.reduce((a, b) => a + b);
+// console.log(networthCalcu);
+
+let actorWorthss = actorWorth.reduce((prev, next) => prev + next.networth, 0);
+// console.log(actorWorthss);
+
+let title = document.getElementById("title");
+// console.log('Before:', title.innerHTML);
+
+domResult = document.getElementById("domResult");
+
+domResult.innerHTML = "<p> GooodNight! </p>"
+console.log("After:", title.innerHTML)
+
+let message = 'Goobye my lover!';
+domResult.innerHTML = `<p>${message}</p>`;
+domResult.style.color = "red";
+
+// grabbing all out divs
+let redDiv = document.getElementById('red');
+let yellowDiv = document.getElementById('yellow');
+let greenDiv = document.getElementById('green');
+
+redDiv.onclick = () => console.log("you clicked red");
+
+
+
+
+
