@@ -50,7 +50,7 @@ const calculateBill = () => {
 
 
   // update the perPersonTotal on DOM & show it to user
-  perPersonTotalDiv.innerText = `$${perPersonTotal}`;
+  perPersonTotalDiv.innerText = `$${perPersonTotal.toLocaleString('en-US')}`;
 
 }
 
