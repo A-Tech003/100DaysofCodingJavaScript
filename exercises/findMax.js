@@ -5,8 +5,19 @@
 
 // Write a function that takes in an array of numbers and returns the largest number
 
-function findMax (array) {
-  
+function findMax (arrays) {
+  let max = 0;
+  arrays.forEach(array => {
+    if(array > max){
+        max = array
+    }else{
+        max = max;
+    }
+  })
+
+  console.log(max);
 }
+
+findMax([2, 4, 5, 7, 8, 10])
 
 //Topics: loops, arrays, conditions,

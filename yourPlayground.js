@@ -490,6 +490,38 @@ redDiv.onclick = () => console.log("you clicked red");
 yellowDiv.onclick = () => console.log("you clicked yellow");
 greenDiv.onclick = () => console.log("you clicked green");
 
+const squares = document.querySelectorAll('.square');
+// console.log(squares);
+
+// for(let square of squares){
+//     console.log(square.value);
+// }
+
+// let union = squares.forEach(square => console.log(square.value))
+let timesClicked = {
+    red: 0,
+    yellow: 0,
+    green: 0
+}
+squares.forEach(square => {
+    square.onclick = () => {
+        timesClicked[square.value] +=1;
+        square.innerText = timesClicked[square.value];
+    };
+})
+
+const clearDivs = () => {
+
+    timesClicked.red = 0;
+    timesClicked.yellow = 0;
+    timesClicked.green = 0;
+    squares.forEach(square => square.innerText = 0);
+}
+
+let clear = document.getElementById("clear");
+
+clear.onclick = () => clearDivs()
+
 
 
 

@@ -6,10 +6,17 @@
 // Write a function that takes a parameter (hours) and converts
 // it to seconds
 
-function howManySeconds(hours) {
+function howManySeconds(hour) {
   // Your function should return an integer
   // of how many seconds are in the hour
+  if(isNaN(hour) || !hour){
+    console.log("please input an hour and make sure it a number!");
+  }else{
+    const hoursInSecond = hour * 3600;
+    console.log(hoursInSecond);
+  }
 }
 
-//Topics: Variables,functions, Math
+// howManySeconds(Number(prompt("how many hour(s)? ")))
 
+//Topics: Variables,functions, Math
