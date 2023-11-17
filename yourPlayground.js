@@ -524,5 +524,28 @@ clear.onclick = () => clearDivs()
 
 
 
+let market = ['🍌','🍎', '🍊', '🍐', '🍌','🍎', '🍊', '🍐', '🍌','🍎', '🍊', '🍐', '🍌','🍎', '🍊', '🍐'];
+let randomSelection = Math.floor(Math.random() * market.length);
+// console.log(market[randomSelection ]);
 
+const weatherScorer = (weatherStatus) => {
+    
+    let result;
 
+    if(weatherStatus == "rain"){
+        result = 1;
+
+    }else if (weatherStatus == "sunny"){
+        result = -1;
+
+    }else if (weatherStatus == "overcast"){
+        result = 0;
+
+    }else{
+        throw "hey what is wrong?";
+    }
+
+    console.log(result);
+}
+weatherScorer(prompt("what is the weather status? "));
+ 

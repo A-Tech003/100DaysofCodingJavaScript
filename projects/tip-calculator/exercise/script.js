@@ -72,7 +72,7 @@ const decreasePeople = () => {
   // if amount is 1 or less simply return
   // (a.k.a you can't decrease the number of people to 0 or negative!)
   if(numOfPeople <= 1){
-    console.log("you can't decrease the number of people to 0 or negative!");
+    throw "you can't decrease the number of people to 0 or negative!";
   }else{
     numOfPeople -=1;
   }
