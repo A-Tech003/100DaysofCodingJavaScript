@@ -32,7 +32,7 @@ function getComputerChoice() {
 function getResult(playerChoice, computerChoice) {
   // return the result of score based on if you won, drew, or lost
   let score;
-  
+
   // All situations where human draws, set `score` to 0
   if (playerChoice == computerChoice){
     score = 0;
@@ -58,6 +58,7 @@ function showResult(score, playerChoice, computerChoice) {
   const resultDiv = document.getElementById('result');
   const handsDiv = document.getElementById('hands');
   const playerScoreDiv = document.getElementById('player-score');
+  const computerScoreDiv = document.getElementById('computer-score');
 
   if (score == -1){
     resultDiv.innerHTML = '<h2>You lose!</h2>';
@@ -69,17 +70,17 @@ function showResult(score, playerChoice, computerChoice) {
 
   handsDiv.innerText = `👱‍♂️ ${playerChoice} vs 🤖 ${computerChoice}`;
   playerScoreDiv.innerText = `Your Score: ${totalScore['playerScore']}`
+  computerScoreDiv.innerText = `Computer Score: ${totalScore['computerScore']}`
 }
 
 // ** Calculate who won and show it on the screen **
 function onClickRPS(playerChoice) {
-  console.log({playerChoice});
   const computerChoice = getComputerChoice();
-  console.log({computerChoice});
   const score = getResult(playerChoice, computerChoice);
-  totalScore['playerScore'] += score
-  console.log({score})
-  console.log({totalScore})
+  totalScore['playerScore'] += score;
+  // totalScore['computerScore'] += score;
+  // console.log({score})
+  // console.log({totalScore})
 
   showResult(score, playerChoice, computerChoice);
   
@@ -97,12 +98,24 @@ function playGame() {
  
 
   // Add a click listener to the end game button that runs the endGame() function on click
+  const enddGame = document.getElementById('endGameButton');
+
+  enddGame.onclick = () => endGame(totalScore)
   
 }
 
 // ** endGame function clears all the text on the DOM **
-function endGame() {
-  
+function endGame(totalScore) {
+  totalScore['playerScore'] = 0;
+  totalScore['computerScore'] = 0;
+
+  const resultDiv = document.getElementById('result');
+  const handsDiv = document.getElementById('hands');
+  const playerScoreDiv = document.getElementById('player-score');
+
+  resultDiv.innerHTML = '';
+  handsDiv.innerText = '';
+  playerScoreDiv.innerText = '';
 }
 
 playGame()
